@@ -13,8 +13,14 @@ To connect to **Dial0ut** email-service-provider, you will have to use the `nym-
 It is easy if you follow these steps:
 
 1. Open your Thunderbird client.
-2. Navigate to "Account Settings > Outgoing Server (SMTP)" or "Account Settings > Server Settings" for IMAP.
-3. Set the Server Name to the address of the nym-socks5-client (at the current version runs at 127.0.0.1 on port 1080) (Substitute with the actual server name or IP).
+2. Navigate to "General > Network" like displayed on the picture:
+![2023-06-29 20 18 54](https://github.com/dial0ut/nymstr-email/assets/33793809/6ffbc1ee-aec9-4cd6-9fff-90166987f7c9)
+
+
+3. Hit the "Manual proxy" button and set it to the address of the nym-socks5-client (at the current version runs at 127.0.0.1 on port 1080) (Substitute with the actual server name or IP).
+![2023-06-29 20 19 01](https://github.com/dial0ut/nymstr-email/assets/33793809/82507f0d-01bc-49c1-b7de-b9327122a658)
+
+
 4. Download or build (with Apple M1 and later this step is needed) your `nym-socks5-client` and connect to email-service-provider of **Dial0ut** as following:
 
 #### Note:
