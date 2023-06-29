@@ -44,11 +44,19 @@ wget https://github.com/nymtech/nym/releases/download/nym-binaries-v1.1.22/nym-s
 4. Make sure to `init` your  `nym-socks5-client` first.
 
 ```
-nym-socks5-clinet init --id email --providerl 4V8euNmD7oBtvQ9RaVGBLK9s2jVDLT7vxkg4iHWfFqza.HGMiWr7zPFohiyFGLzP82jDnVXodLvpjvjKyVvNJ33Uv@Bkq5KLDMRiL9vAaHqwCN7LJ16ecvhU7WsJoeWqk6PYjG
+nym-socks5-clinet init --id email --provider 4V8euNmD7oBtvQ9RaVGBLK9s2jVDLT7vxkg4iHWfFqza.HGMiWr7zPFohiyFGLzP82jDnVXodLvpjvjKyVvNJ33Uv@Bkq5KLDMRiL9vAaHqwCN7LJ16ecvhU7WsJoeWqk6PYjG
 ```
 - this will connect to **Dial0ut email-service-provider** and you will be able to route most of the top20 emails over **Nym mixnet**.
 - for **Protonmail**, if you want to use Protonmail in any desktop client, you have to download their *Protonbridge, which is in fact SMTP/IMAP server sitting on your local machine and relaying all email traffic to Protonmail servers. This will be probably causing issues and is currently not tested because the overall solution would be a bit over-engineered.*
-- However; we might add this functionality to Protonbridge if there is large enough demand for it. The protonbridge-cli itself is very complex, large codebase and frontend app is written in Qt when simple widget in Go or even React would be enough ... therefore we have decided not to pursue this solution. 
+- However; we might add this functionality to Protonbridge if there is large enough demand for it. The protonbridge-cli itself is very complex, large codebase and frontend app is written in Qt when simple widget in Go or even React would be enough ... therefore we have decided not to pursue this solution.
+
+5. `run` it like this:
+```
+nym-socks5-client run --id email &
+
+```
+
+If you want to run this process persistently, use the `.service` file template from below with a few changes. 
 ## Running Your Own Instance of the Service Provider (SP)
 
 #### *Security note/advisor*y
