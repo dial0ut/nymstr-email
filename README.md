@@ -58,7 +58,15 @@ nym-socks5-client run --id email &
 
 If you want to run this process persistently, use the `.service` file template from below with a few changes. 
 ## Running Your Own Instance of the Service Provider (SP)
+### Allowing SMTP/IMAP traffic over your firewall
+```
+baah ufw_rules.sh
+```
 
+### using the allowed.list for the top20 common email providers
+```
+cp allowed.list ~/.nym/service-providers/network-requester/<id>/allowed.list
+```
 #### *Security note/advisor*y
 If you want to use extra security layer like we do, create a user `nym` - `useradd -s /sbin/nologin -m nym` and then switch to that user:
 `su -s /bin/bash nym` or `sudo -u nym bash` and exit after you `init` the client. 
